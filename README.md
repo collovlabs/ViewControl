@@ -1,6 +1,6 @@
 # Intergrating View Conditions for Image Synthesis
 This is the official implementation of the paper "Intergrating View Conditions for Image Synthesis". 
-[[Paper]](https://arxiv.org/abs/2310.16002)
+[[Paper]](https://arxiv.org/pdf/2310.16002v3)
 
 ## Pipeline
 <p align="center">
@@ -132,12 +132,10 @@ Here are some examples of our method:
 ## Citation 
 If you find this work useful, please cite our paper:
 ```
-@misc{bai2023integrating,
-      title={Integrating View Conditions for Image Synthesis}, 
-      author={Jinbin Bai and Zhen Dong and Aosong Feng and Xiao Zhang and Tian Ye and Kaicheng Zhou},
-      year={2023},
-      eprint={2310.16002},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{bai2023integrating,
+  title={Integrating view conditions for image synthesis},
+  author={Bai, Jinbin and Dong, Zhen and Feng, Aosong and Zhang, Xiao and Ye, Tian and Zhou, Kaicheng},
+  journal={arXiv preprint arXiv:2310.16002},
+  year={2023}
 }
 ```
