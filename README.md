@@ -1,8 +1,21 @@
 # Intergrating View Conditions for Image Synthesis
-This is the official implementation of the paper "Intergrating View Conditions for Image Synthesis". 
-[[Paper]](https://arxiv.org/pdf/2310.16002v3)
+This is the official implementation of the paper "Intergrating View Conditions for Image Synthesis", which is accepted by IJCAI 2024. 🎉 
+
+[[Paper]](https://www.ijcai.org/proceedings/2024/840)
+
+## Introduction
+
+This paper presents **ViewControl** that enhances existing models with awareness of viewpoint information, thereby
+enabling improved control over text-to-image diffusion models, such as Stable Diffusion. This advancement leads to a
+more controllable approach for image editing tasks. Our proposed pipeline effectively addresses crucial aspects of image synthesis, including *consistency*, *controllability*, and *harmony*. Through both quantitative and qualitative comparisons with recently published
+open-source state-of-the-art methods, we have showcased the
+favorable performance of our approach across various dimensions.
+
 
 ## Pipeline
+
+The pipeline of ViewControl consists of three steps: LLM Planer, Pose Estimation and Synthesis, and Image Synthesis. The LLM Planer is responsible for understanding the users' inputs and bridging the gap between the users' inputs and the following steps. The Pose Estimation and Synthesis module is responsible for estimating the pose of the object in the input image and synthesizing the image of the object at the target pose. The Image Synthesis module is responsible for synthesizing the final image by combining the synthesized image of the object with the background of the input image. The pipeline of ViewControl is shown in the following figure:
+
 <p align="center">
   <img src="./imgs/demo/pipeline.jpg" width="800" />
 
@@ -73,7 +86,7 @@ where `x1_y1.png` is the image of `obj_1` at pose `(x1, y1)`, and `class_1` is t
 
 
 ## Inference
-Our pipeline consists of three steps: pose estimation, pose synthesis and image synthesis.
+
 ### Pose Estimation
 To estimate the pose of a given image, you can use the following command:
 ```bash
@@ -111,7 +124,7 @@ python image_synthesis.py --path_src_img <path_to_src_img> --path_ref_img <path_
 ```
 If you need faster inference, you can set the dreambooth option to False or pre train it or change it to another lightweight personalization method like LoRA. 
 
-### Others
+### Other Utils
 If you need to obtain a more accurate caption or class name from an image, you can use the following command:
 ```bash
 python obj_name_synthesis.py --path_src_img <path_to_src_img> --save_path <save_path>
@@ -123,7 +136,7 @@ python utils.py --input_path <input_path> --prompt <prompt> --output_path <outpu
 ```
 
 ## Examples
-Here are some examples of our method:
+Here are some examples of the results of ViewControl:
 <p align="center">
   <img src="./imgs/demo/Intro.jpg" width="800" />
 </p>
@@ -132,10 +145,18 @@ Here are some examples of our method:
 ## Citation 
 If you find this work useful, please cite our paper:
 ```
-@article{bai2023integrating,
-  title={Integrating view conditions for image synthesis},
-  author={Bai, Jinbin and Dong, Zhen and Feng, Aosong and Zhang, Xiao and Ye, Tian and Zhou, Kaicheng},
-  journal={arXiv preprint arXiv:2310.16002},
-  year={2023}
+@inproceedings{ijcai2024p840,
+  title     = {Integrating View Conditions for Image Synthesis},
+  author    = {Bai, Jinbin and Dong, Zhen and Feng, Aosong and Zhang, Xiao and Ye, Tian and Zhou, Kaicheng},
+  booktitle = {Proceedings of the Thirty-Third International Joint Conference on
+               Artificial Intelligence, {IJCAI-24}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Kate Larson},
+  pages     = {7591--7599},
+  year      = {2024},
+  month     = {8},
+  note      = {AI, Arts & Creativity},
+  doi       = {10.24963/ijcai.2024/840},
+  url       = {https://doi.org/10.24963/ijcai.2024/840},
 }
 ```
