@@ -1,5 +1,5 @@
-# Intergrating View Conditions for Image Synthesis
-This is the official implementation of the paper "Intergrating View Conditions for Image Synthesis", which is accepted by IJCAI 2024. 🎉 
+# Integrating View Conditions for Image Synthesis
+This is the official implementation of the paper "Integrating View Conditions for Image Synthesis", which is accepted by IJCAI 2024. 🎉 
 
 [[Paper]](https://www.ijcai.org/proceedings/2024/840)
 
